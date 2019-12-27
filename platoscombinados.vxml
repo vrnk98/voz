@@ -1,5 +1,5 @@
 <vxml version="2.1" xml:lang="es-ES">
-	<form id="platoscombinados"
+	<form id="platoscombinados">
 		<block>
 			<prompt>Para comer de platos combinados puedes ir a los barrios del Fargue, Sacromonte, San Ildefonso o Albaicin</prompt>
 		</block>
