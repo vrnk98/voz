@@ -1,21 +1,20 @@
 <vxml version="2.1" xml:lang="es-ES">
-	<form id="datos" scope="document">
-		<field name="tipoComida">
-			<prompt>Que tipo de comida desea comer? </prompt>
-			<grammar src="comida.jsgf"/>
-			<noinput>
-				<prompt> No he escuchado nada</prompt>
-				<reprompt />
-			</noinput>	
-			<nomatch>
-				<prompt> Di vegetariana, mediterrenea, arabe, espaniola, italiana o china</prompt>
-			</nomatch>	
-		</field>
-		<field name="confirmaComida" type="boolean" cond="0.6 > tipoComida$.confidence">
-			<filled>
-				<prompt>Has dicho <value expr="tipoComida"/>? </prompt>
-			</filled>
-		</field>
+	<menu>
+			<prompt>Puede elegir comer <enumerate/></prompt>
+			<choice next=""> vegetariana
+			</choice>
+			<choice next="" mediterrenea
+			</choice>
+			<choice next=""> arabe
+			</choice>
+			<choice next="" espaniola
+			</choice>
+			<choice next="" italiana
+			</choice>
+			<choice next="" china
+			</choice>
+	</menu>
+</vxml>
 		<filled>
 			<if cond="tipoComida='vegetariana'">					
 				<prompt>Para comer comida vegetariana puedes ir a los barrios de San Ildefonso o Albaicin</prompt>
