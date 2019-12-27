@@ -5,7 +5,7 @@
 			</choice>
 			<choice next="https://raw.githubusercontent.com/vrnk98/voz/master/raciones.vxml?token=AHW5NBWCERKZNCAOLOYHVSS6B6N5G"> raciones
 			</choice>
-			<choice next="https://raw.githubusercontent.com/vrnk98/voz/master/platoscombinados.vxml?token=AHW5NBQ6UBA3OQ6DPNLNMOS6B6N56"> platos combinados
+			<choice next="https://raw.githubusercontent.com/vrnk98/voz/master/platoscombinados.vxml?token=AHW5NBUJVWY4TET52NDQAVC6B6SOK"> platos combinados
 			</choice>
 			<choice next="https://raw.githubusercontent.com/vrnk98/voz/master/buffet.vxml?token=AHW5NBUB3HLPYW4JEHXWOK26B6N7Q"> buffet
 			</choice>
