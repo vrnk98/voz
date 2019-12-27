@@ -1,0 +1,45 @@
+<vxml version="2.1" xml:lang="es-ES">
+	<form id="datos" scope="document">
+		<field name=tipoPlato">
+			<prompt>Pulsa 1 para tapas, pulsa 2 para raciones, pulsa 3 para platos combinados</prompt>
+			<grammar mode="voice" root="toplevel">
+				<rule id="toplevel">
+					<one-of>
+						<item>tapas</item>
+						<item>raciones</item>
+						<item>platos combinados</item>
+					</one-of>
+				</rule>
+			</grammar>
+			
+			<grammar mode="dtmf" root="toplevel">
+				<rule id="toplevel">
+					<one-of>
+						<item>1 <tag> out.tipoPlato = 'tapas';</tag></item>
+						<item>2 <tag> out.tipoPlato = 'raciones';</tag></item>
+						<item>3 <tag> out.tipoPlato = 'platos combinados';</tag></item>
+					</one-of>
+				</rule>
+			</grammar>
+			
+			<filled>
+				<prompt>Has seleccionado <value expr="tipoPlato" /></prompt>
+			</filled>
+			
+			<filled>
+				<if cond="tipoPlato == 'tapas'">
+					<prompt>Para comer de tapas puedes ir a los barrios de Sacromonte, San Ildefonso o Albaicin </prompt>
+				</if>
+				<if cond="tipoPlato == 'raciones'">
+					<prompt>Para comer de raciones puedes ir al barrio de Sacromonte, San Ildefonso o Albaicin</prompt>
+				</if>
+				<if cond="tipoPlato == 'platos combinados'">
+					<prompt>Para comer de platos combinados puedes ir a los barrios del Fargue, Sacromonte, San Ildefonso o Albaicin</prompt>
+				</if>
+				<if cond="tipoPlato == 'buffet'">
+					<prompt>Para comer de buffet puedes ir al barrio de San Ildefonso </prompt>
+				</if>
+			</filled>
+		</field>
+	</form>
+</vxml>
