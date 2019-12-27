@@ -1,5 +1,7 @@
 <vxml version="2.1" xml:lang="es-ES">
-	<block>
-		<prompt>Para comer comida arabe puedes ir a los barrios de San Ildefonso o Albaicin</prompt>
-	</block>
+	<form id="arabe">
+		<block>
+			<prompt>Para comer comida arabe puedes ir a los barrios de San Ildefonso o Albaicin</prompt>
+		</block>
+	</form>
 </vxml>

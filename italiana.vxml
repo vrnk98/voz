@@ -1,5 +1,7 @@
 <vxml version="2.1" xml:lang="es-ES">
-	<block>		
-		<prompt>Para comer comida italiana puedes ir a los barrios de San Ildefonso</prompt>
-	</block>
+	<form id="italiana">
+		<block>		
+			<prompt>Para comer comida italiana puedes ir a los barrios de San Ildefonso</prompt>
+		</block>
+	</form>
 </vxml>

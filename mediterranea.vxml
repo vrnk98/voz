@@ -1,5 +1,7 @@
 <vxml version="2.1" xml:lang="es-ES">
-	<block>
-		<prompt>Para comer comida mediterrenea puedes ir a los barrios del Fargue, San Ildefonso, Sacromonte o Albaicin</prompt>
-	</block>
+	<form id="mediterrenea">
+		<block>
+			<prompt>Para comer comida mediterrenea puedes ir a los barrios del Fargue, San Ildefonso, Sacromonte o Albaicin</prompt>
+		</block>
+	</form>
 </vxml>
