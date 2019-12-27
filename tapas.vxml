@@ -1,5 +1,7 @@
 <vxml version="2.1" xml:lang="es-ES">
-	<block>
-		<prompt>Para comer de tapas puedes ir a los barrios de Sacromonte, San Ildefonso o Albaicin </prompt>
-	</block>
+	<form id="tapas">
+		<block>
+			<prompt>Para comer de tapas puedes ir a los barrios de Sacromonte, San Ildefonso o Albaicin </prompt>
+		</block>
+	</form>
 </vxml>

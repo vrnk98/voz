@@ -1,7 +1,7 @@
 <vxml version="2.1" xml:lang="es-ES">
 	<menu>
 			<prompt>Para elegir donde quiere comer elige por <enumerate/></prompt>
-			<choice next="https://raw.githubusercontent.com/vrnk98/voz/master/tipoplato.vxml?token=AHW5NBX4P242AGTSVXEEQYC6B6JV4"> tipo de plato 
+			<choice next="https://raw.githubusercontent.com/vrnk98/voz/master/tipoplato.vxml?token=AHW5NBQLWTZGR6JL2NGS2GC6B6SSQ"> tipo de plato 
 			</choice>
 			<choice next="https://raw.githubusercontent.com/vrnk98/voz/master/tipocomida.vxml?token=AHW5NBR7PAC7BEFCXVTCV726B6L4U"> tipo de comida
 			</choice>
