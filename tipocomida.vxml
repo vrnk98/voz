@@ -1,39 +1,17 @@
 <vxml version="2.1" xml:lang="es-ES">
 	<menu>
 			<prompt>Puede elegir comer <enumerate/></prompt>
-			<choice next=""> vegetariana
+			<choice next="https://raw.githubusercontent.com/vrnk98/voz/master/vegetariana.vxml?token=AHW5NBWAQZUIQ4NED7C4WH26B6OBU"> vegetariana
 			</choice>
-			<choice next="" mediterrenea
+			<choice next="https://raw.githubusercontent.com/vrnk98/voz/master/mediterranea.vxml?token=AHW5NBSOHPEETNHVRYXQNIC6B6OHU"> mediterrenea
 			</choice>
-			<choice next=""> arabe
+			<choice next="https://raw.githubusercontent.com/vrnk98/voz/master/arabe.vxml?token=AHW5NBV752ADOY5VF2XD7H26B6OFM"> arabe
 			</choice>
-			<choice next="" espaniola
+			<choice next="https://raw.githubusercontent.com/vrnk98/voz/master/espaniola.vxml?token=AHW5NBUKHC5KYIFKMTKHTBK6B6OD6"> espaniola
 			</choice>
-			<choice next="" italiana
+			<choice next="https://raw.githubusercontent.com/vrnk98/voz/master/italiana.vxml?token=AHW5NBQQ5KFUGXE7OKX6EFC6B6ODC"> italiana
 			</choice>
-			<choice next="" china
+			<choice next="https://raw.githubusercontent.com/vrnk98/voz/master/china.vxml?token=AHW5NBQ3EA44ILZ3EHDJC7C6B6OII"> china
 			</choice>
 	</menu>
-</vxml>
-		<filled>
-			<if cond="tipoComida='vegetariana'">					
-				<prompt>Para comer comida vegetariana puedes ir a los barrios de San Ildefonso o Albaicin</prompt>
-			</if>
-			<if cond="tipoComida='mediterrenea'">
-				<prompt>Para comer comida mediterrenea puedes ir a los barrios del Fargue, San Ildefonso, Sacromonte o Albaicin</prompt>
-			</if>
-			<if cond="tipoComida='arabe'">
-				<prompt>Para comer comida arabe puedes ir a los barrios de San Ildefonso o Albaicin</prompt>
-			</if>
-			<if cond="tipoComida='espaniola'">
-				<prompt>Para comer comida espaniola puedes ir a los barrios del Fargue, Sacromonte o Albaicin</prompt>
-			</if>
-			<if cond="tipoComida='italiana'">
-				<prompt>Para comer comida italiana puedes ir a los barrios de San Ildefonso</prompt>
-			</if>
-			<if cond="tipoComida='china'">
-				<prompt>Para comer comida china puedes ir a los barrios de San Ildefonso</prompt>
-			</if>
-		</filled>
-	</form>
 </vxml>
