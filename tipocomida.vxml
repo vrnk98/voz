@@ -1,0 +1,40 @@
+<vxml version="2.1" xml:lang="es-ES">
+	<form id="datos" scope="document">
+		<field name="tipoComida">
+			<prompt>Que tipo de comida desea comer? </prompt>
+			<grammar src="comida.jsgf"/>
+			<noinput>
+				<prompt> No he escuchado nada</prompt>
+				<reprompt />
+			</noinput>	
+			<nomatch>
+				<prompt> Di vegetariana, mediterrenea, arabe, espaniola, italiana o china</prompt>
+			</nomatch>	
+		</field>
+		<field name="confirmaComida" type="boolean" cond="0.6 > tipoComida$.confidence">
+			<filled>
+				<prompt>Has dicho <value expr="tipoComida"/>? </prompt>
+			</filled>
+		</field>
+		<filled>
+			<if cond="tipoComida='vegetariana'">					
+				<prompt>Para comer comida vegetariana puedes ir a los barrios de San Ildefonso o Albaicin</prompt>
+			</if>
+			<if cond="tipoComida='mediterrenea'">
+				<prompt>Para comer comida mediterrenea puedes ir a los barrios del Fargue, San Ildefonso, Sacromonte o Albaicin</prompt>
+			</if>
+			<if cond="tipoComida='arabe'">
+				<prompt>Para comer comida arabe puedes ir a los barrios de San Ildefonso o Albaicin</prompt>
+			</if>
+			<if cond="tipoComida='espaniola'">
+				<prompt>Para comer comida espaniola puedes ir a los barrios del Fargue, Sacromonte o Albaicin</prompt>
+			</if>
+			<if cond="tipoComida='italiana'">
+				<prompt>Para comer comida italiana puedes ir a los barrios de San Ildefonso</prompt>
+			</if>
+			<if cond="tipoComida='china'">
+				<prompt>Para comer comida china puedes ir a los barrios de San Ildefonso</prompt>
+			</if>
+		</filled>
+	</form>
+</vxml>
