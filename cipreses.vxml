@@ -1,0 +1,7 @@
+<vxml version="2.1" xml:lang="es-ES">
+	<form id="cipreses">
+		<block>		
+			<prompt>Antiguamente indicaban a los transeuntes en que casas podía recibir comida (1 ciprés) y en cual podía, además, pasar la noche (2 cipreces)</prompt>
+		</block>
+	</form>
+</vxml>

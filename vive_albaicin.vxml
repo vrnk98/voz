@@ -1,0 +1,7 @@
+<vxml version="2.1" xml:lang="es-ES">
+	<form id="vive_albaicin">
+		<block>		
+			<prompt>En el Albaicin vivian los nazaries</prompt>
+		</block>
+	</form>
+</vxml>

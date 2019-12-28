@@ -1,0 +1,10 @@
+<vxml version="2.1" xml:lang="es-ES">
+	<form id="carmen">
+		<block>		
+			<prompt>Un carmen es un tipo de vivienda urbana típica de la ciudad de Granada, con un espacio verde anexo, jardín y huerta a la vez, que constituye
+					una extension de la vivienda. El carme ns  un espacio cerrado al exterior, cercado por tapias de unos dos metros de altura, normalmente
+					blanqueadas, con vegetacion frondosa. Es propio de los barrios asentados en las colinas de la ciurdad, Albaicin y Realejo.
+			</prompt>
+		</block>
+	</form>
+</vxml>
