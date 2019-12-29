@@ -1,17 +1,17 @@
 <vxml version="2.1" xml:lang="es-ES">
 	<menu>
 			<prompt>Puede elegir comer <enumerate/></prompt>
-			<choice next="https://raw.githubusercontent.com/vrnk98/voz/master/vegetariana.vxml?token=AHW5NBQ2LZ2HZYILJRYJFEK6B6UUM"> vegetariana
+			<choice next="https://raw.githubusercontent.com/vrnk98/voz/master/vegetariana.vxml"> vegetariana
 			</choice>
-			<choice next="https://raw.githubusercontent.com/vrnk98/voz/master/mediterranea.vxml?token=AHW5NBQN7RQY5ZPOBUWGUMS6B6UTI"> mediterrenea
+			<choice next="https://raw.githubusercontent.com/vrnk98/voz/master/mediterranea.vxml"> mediterrenea
 			</choice>
-			<choice next="https://raw.githubusercontent.com/vrnk98/voz/master/arabe.vxml?token=AHW5NBXSRQ6AMS4QIMJAPDC6B6UOY"> arabe
+			<choice next="https://raw.githubusercontent.com/vrnk98/voz/master/arabe.vxml"> arabe
 			</choice>
-			<choice next="https://raw.githubusercontent.com/vrnk98/voz/master/espaniola.vxml?token=AHW5NBS256UBP3FXW3KF6C26B6URA"> espaniola
+			<choice next="https://raw.githubusercontent.com/vrnk98/voz/master/espaniola.vxml"> espaniola
 			</choice>
-			<choice next="https://raw.githubusercontent.com/vrnk98/voz/master/italiana.vxml?token=AHW5NBWYMLRJJJDE42E5H7S6B6USA"> italiana
+			<choice next="https://raw.githubusercontent.com/vrnk98/voz/master/italiana.vxml"> italiana
 			</choice>
-			<choice next="https://raw.githubusercontent.com/vrnk98/voz/master/china.vxml?token=AHW5NBRHEAD3FCDCYDFN4JC6B6UQC"> china
+			<choice next="https://raw.githubusercontent.com/vrnk98/voz/master/china.vxml"> china
 			</choice>
 	</menu>
 </vxml>

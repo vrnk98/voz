@@ -1,0 +1,15 @@
+<vxml version="2.1" xml:lang="es-ES">
+	<menu>
+			<prompt>Puede conocer datos curiosos solo tiene que decir<enumerate/></prompt>
+			<choice next="https://raw.githubusercontent.com/vrnk98/voz/master/carmen.vxml"> Que es un carmen? 
+			</choice>
+			<choice next="https://raw.githubusercontent.com/vrnk98/voz/master/albaicin_sacromonte.vxml"> Diferencias
+			</choice>
+			<choice next="https://raw.githubusercontent.com/vrnk98/voz/master/vive_albaicin.vxml"> Quien vivia? 
+			</choice>
+			<choice next="https://raw.githubusercontent.com/vrnk98/voz/master/fiesta_albaicin.vxml"> fiesta en el Albaicin
+			</choice>
+			<choice next="https://raw.githubusercontent.com/vrnk98/voz/master/cipreses.vxml"> Por que hay cipreses? 
+			</choice>
+	</menu>
+</vxml>
