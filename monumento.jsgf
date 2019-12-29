@@ -1,0 +1,5 @@
+#JSGF V1.0;
+
+grammar monumento;
+
+public <monumento> = puerta de fajalauza | puerta monaita | puerta de elvira | iglesia de el salvador | palacio de dar al-horra | el bañuelo | san pedro y san pablo | casa de porras | casa de castril;

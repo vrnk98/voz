@@ -1,0 +1,179 @@
+<vxml version="2.1" xml:lang="es-ES">
+
+
+	<form id="to_albaicin">
+		<field name="barrio">
+			<prompt timeout="10s">En que barrio se encuentra?</prompt>
+			<grammar src="barrio.jsgf"/>
+			
+			<help>
+				Diga un barrio, por ejemplo: Rosaleda
+				<reprompt/>
+			</help>
+
+			<noinput>
+				No he oido nada
+				<reprompt/>
+			</noinput>
+
+			<nomatch>
+				He oido algo, pero es un barrio desconocido
+				<reprompt/>
+			</nomatch>
+		</field>
+
+		<field name="confirmacion_barrio" type="boolean">
+			<prompt>Has dicho <value expr="barrio"/>?</prompt>
+			<filled>
+				<if cond="!confirmacion_barrio">
+					<clear namelist="barrio confirmacion_barrio"/>
+
+				</if>
+			</filled>
+		</field>
+
+		
+
+		<filled mode="all" namelist="barrio confirmacion_barrio">
+
+				<if cond="barrio == 'Joaquina Eguaras'">
+					<prompt>Camine hasta Joaquina Eguaras 21, coja el autobus N5 hasta avenida constitucion - Triunfo.
+						Coja el autobus N9 hasta Andarax 35 - San Miguel Alto</prompt>
+
+				<elseif cond="barrio == 'La Cruz'"/>
+					<prompt>Camine hasta Francissco pradilla - Fte 6. Coja el autobus N3 hasta Constitución 7. 
+						Coja el autobus N9 hasta Andarax 35 - San Miguel Alto</prompt>
+
+				<elseif cond="barrio == 'Pajaritos'"/>
+					<prompt>Camine hasta Avenida Constitución 41 - Caleta - Juzgados. 
+						Coja el autobus N5 hasta Gran Via 5  - Catedral.
+						Camine hasta Plaza Nueva. Coja el autobus C32 hasta Cuesta del Chapiz 60.</prompt>
+
+				<elseif cond="barrio == 'Plaza de Toros'"/>
+					<prompt> Camine hasta Plaza San Isidro.
+						 Coja el autobus N9 hasta Andarax 35 - San Miguel Alto.</prompt>
+
+				<elseif cond="barrio == 'San Francisco Javier'"/>
+					<prompt>Camine hasta Juan Pablo segundo 5
+						Coja el autobús 33 hasta Constitución 7. 
+						Camine hasta Avenida Constitucion 2 - Triunfo.
+						Coja el autobus N9 hasta Andarax 35 - San Miguel Alto</prompt>
+
+				<elseif cond="barrio == 'San Ildefonso'"/>
+					<prompt>Camine hasta Avenida Constitucion 2 - Triunfo
+						Coja el autobus N9 hasta Carretera de Murcia - Fajalauza</prompt>
+
+				<elseif cond="barrio == 'Centro'"/>
+					<prompt>Camine hasta Alhambra Generalife 2.
+						Coja el autobus C32 hasta Cuesta del Chapiz 60.</prompt>
+
+				<elseif cond="barrio == 'Realejo'"/>
+					<prompt>Camina hasta Jesus y Maria 1.
+						Coja el autobus C32 hasta Cuesta del Chapiz 60.</prompt>
+
+				<elseif cond="barrio == 'Angustias'"/>
+					<prompt>Camine hasta Carretera de Malaga 125 - Venta Zurita.
+						Coja el autobus N1 hasta Avenida Constitucion 2 - Triunfo.
+						Coja el autobus N9 hasta Andarax 35 - San Miguel Alto.</prompt>
+
+				<elseif cond="barrio == 'Bobadilla'"/>
+					<prompt>Camine hasta Barriada Bobadilla - Secadero.
+						Coja el autobus N1 hasta Avenida Constitucion 2 - Triunfo. 
+						Coja el autobus N9 hasta Andarax 35 - San Miguel Alto
+						</prompt>
+
+				<elseif cond="barrio == 'Cerrillo de Maracena'"/>
+					<prompt>Camine hasta Fernando Gomez de la Cruz 59. 
+						Coja el autobus N3 hasta Avenida Constitucion 2 - Triunfo.
+						Coja el autobus N9 hasta Andarax 35 - San Miguel Alto</prompt>
+
+				<elseif cond="barrio == 'Bola de Oro'"/>
+					<prompt>Camine hasta Plaza de los Andes.
+						Coja el autobus 9 hasta Recogidas 2.
+						Camine hasta Plaza Nueva.
+						Coja el autobus C31 hasta Cuesta del Chapiz 60.</prompt>
+
+				<elseif cond="barrio == 'Camino de los Neveros'"/>
+					<prompt>Camine hasta Jose Tamayo 23.
+						Coja el autobus 11 hasta Avenida Constitucion 2 - Triunfo. 
+						Coja el autobus N9 hasta Andarax 35 - San Miguel Alto</prompt>
+
+				<elseif cond="barrio == 'Carretera de la Sierra'"/>
+					<prompt>Camine hasta Carretera de la Sierra - Ronda Sur.
+						Coja el autobus 33 hasta Gran Via 14 - Catedral
+						Camine hasta Plaza Nueva.
+						Coja el autobus C31 hasta Cuesta del Chapiz 60</prompt>
+
+				<elseif cond="barrio == 'Mirasierra'"/>
+					<prompt>Camine hasta Emperador Carlos V - Sierra Nevada.
+						Coja el autobus 8 hasta Gran Via 14 - Catedral.
+						Camine hasta Plaza Nueva.
+						Coja el autobus C31 hasta Cuesta del Chapiz 60</prompt>
+
+				<elseif cond="barrio == 'Lancha del Genil'"/>
+					<prompt>Camina hasta Carretera de la Sierra 297.
+						Coja el autobus 33 hasta Gran Via 54.
+						Camine dirección Albaicin</prompt>
+
+				<elseif cond="barrio == 'Almanjayar'"/>
+					<prompt>Camine hasta Avenida Federico Garcia Lorca 27.
+						Coja el autobus 21 hasta Avenida Constitucion 7.
+						Camine hasta Avenida Constitucion 2 - Triunfo.
+						Coja el autobus N9 hasta Andarax 35 - San Miguel Alto</prompt>
+
+				<elseif cond="barrio == 'Campo Verde'"/>
+					<prompt>Camine hasta Camino de Alfacar 27 - Caseria Montijo. 
+						Coja el autobus U3 hasta Profesor Clavera - Alojamientos Universitarios
+						Camine direccion Albaicin</prompt>
+
+				<elseif cond="barrio == 'Cartuja'"/>
+					<prompt>Camine hasta Julio Moreno Davila 14. 
+						Coja el autobus 8 hasta Profesor Clavera - Alojamientos Universitarios.
+						Camine direccion Albaicin.</prompt>
+
+				<elseif cond="barrio == 'Caseria de Montijo'"/>
+					<prompt>Camine hasta Camino de Alfacar - Juan Ramon Jimenez.
+						Coja el autobus 8 hasta Profesor Clavera - Alojamientos Universitarios.
+						Camine direccion Albaicin.</prompt>
+
+				<elseif cond="barrio == 'Parque Nueva Granada'"/>
+					<prompt>Camine hasta Plaza Agustin Laborde.
+						Coja el autobus 8 hasta Profesor Clavera - Alojamientos Universitarios.
+						Camine direccion Albaicin.</prompt>
+
+				<elseif cond="barrio == 'La Paz'"/>
+					<prompt>Camine hasta Pedro Machuca - Comandancia Guardia Civil
+						Coja el autobus N6 hasta Avenida Madrid 23
+						Camine hasta Plaza San Isidro.
+						Coja el autobus N9 hasta Andarax 35 - San Miguel Alto</prompt>
+
+				<elseif cond="barrio == 'Rey Badis'"/>
+					<prompt>Camine hasta Julio Moreno Davila 14. 
+						Coja el autobus 8 hasta Profesor Clavera - Alojamientos Universitarios.
+						Camine direccion Albaicin.</prompt>
+
+				<elseif cond="barrio == 'Camino de Ronda'"/>
+					<prompt>Camina hasta Camino de Ronda 130 - Mendez Nuñez.
+						Coja el autobus U3 hasta Profesor Clavera - Instituto Andaluz de Geofísica.
+						Camine direccion Albaicin.</prompt>
+
+				<elseif cond="barrio == 'Figares'"/>
+					<prompt>Camina hasta Camino de Ronda 38.
+						Coja el autobus U3 hasta Profesor Clavera - Instituto Andaluz de Geofísica.
+						Camine direccion Albaicin.</prompt>
+
+				<elseif cond="barrio == 'Rosaleda'"/>
+					<prompt>Camine hasta Carretera de Malaga 69.
+						Coja el autobus N1 hasta Avenida Constitucion 2 - Triunfo. 
+						Coja el autobus N9 hasta Andarax 35 - San Miguel Alto
+						</prompt>
+
+				<elseif cond="barrio == 'Zaidin'"/>
+					<prompt>Camine hasta Avenida Dilar 33. 
+						Coja el autobus 4 hasta Triunfo.
+						Camine hasta Avenida Constitucion 2 - Triunfo.
+						Coja el autobus N9 hasta Andarax 35 - San Miguel Alto</prompt>
+				</if>
+		</filled>
+	</form>
+</vxml>
