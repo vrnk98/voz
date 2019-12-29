@@ -3,12 +3,13 @@
 		<block>
 			<prompt>Para comer de buffet puedes ir al barrio de San Ildefonso </prompt>
 		</block>
-	</form>
-	<menu>
+		<menu>
 			<prompt>Puede ir a  <enumerate/></prompt>
 			<choice next=""https://github.com/vrnk98/voz/blob/master/main/main.vxml"/> menu principal
 			</choice>
 			<choice next="https://raw.githubusercontent.com/vrnk98/voz/master/mediterranea.vxml"/> salir
 			</choice>
 	</menu>
+	</form>
+	
 </vxml>
