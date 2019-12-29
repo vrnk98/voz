@@ -8,27 +8,27 @@
       </enumerate>
     </prompt>
 
-    <choice next="http://webhosting.voxeo.net/206414/www/NPI2019/sitiosAlbaicin/main.vxml">
+    <choice next="https://raw.githubusercontent.com/vrnk98/voz/master/sitiosAlbaicin/main.vxml">
       Saber donde esta un sitio determinado
     </choice>
 
-    <choice next="https://raw.githubusercontent.com/vrnk98/voz/master/prueba.vxml?token=AHW5NBTNQ7GWHNUOMDGBEGS6CHFJ2">
+    <choice next="https://raw.githubusercontent.com/vrnk98/voz/master/comida.vxml">
       Saber donde comer
     </choice>
 
-    <choice next="https://raw.githubusercontent.com/vrnk98/voz/master/tipoplato.vxml?token=AHW5NBVVNAHTA4EB3PA4SHS6B6TSM">
+    <choice next="https://raw.githubusercontent.com/vrnk98/voz/master/to_albaicin.vxml">
       Saber como llegar al Albaicin
     </choice>
 
-    <choice next="https://raw.githubusercontent.com/vrnk98/voz/master/tipocomida.vxml?token=AHW5NBUNFH3CWGNAU2TOYES6B6UXA">
+    <choice next="https://raw.githubusercontent.com/vrnk98/voz/master/cuando.vxml">
       Conocer fechas y epocas de los monumentos del Albaicin
     </choice>
 
-    <choice next="https://raw.githubusercontent.com/vrnk98/voz/master/prueba2.vxml?token=AHW5NBR7EX4BHN65EBDFNBK6CHFKA">
+    <choice next="https://raw.githubusercontent.com/vrnk98/voz/master/datosInteres/informacionInteres.vxml">
       Hacer preguntas sobre el Albaicin
     </choice>
 
-    <choice next="http://webhosting.voxeo.net/206414/www/NPI2019/datosInteres/informacionInteres.vxml">
+    <choice next="https://raw.githubusercontent.com/vrnk98/voz/master/curiosidades.vxml">
       Conocer datos de interes
     </choice>
   </menu>
