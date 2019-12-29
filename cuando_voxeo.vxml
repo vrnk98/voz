@@ -1,0 +1,58 @@
+<vxml version="2.1" xml:lang="es-ES">
+	<form id="fecha_construccion">
+		<field name="monumento">
+			<prompt timeout="10s">De que monumento desea saber la fecha de construccion?</prompt>
+			<grammar src="monumento.jsgf"/>
+			
+			<help>
+				Diga un monumento, por ejemplo: Puerta de Elvira
+				<reprompt/>
+			</help>
+
+			<noinput>
+				No he oido nada
+				<reprompt/>
+			</noinput>
+
+			<nomatch>
+				He oido algo, pero es un monumento desconocido
+				<reprompt/>
+			</nomatch>
+		</field>
+
+		<field name="confirmacion_monumento" type="boolean">
+			<prompt>Has dicho <value expr="monumento"/>?</prompt>
+			<filled>
+				<if cond="!confirmacion_monumento">
+					<clear namelist="monumento"/>
+					<clear namelist="confirmacion_monumento"/>
+				</if>
+			</filled>
+		</field>
+
+		
+
+		<filled mode="all" namelist="monumento confirmacion_monumento">
+
+				<if cond="monumento == 'puerta de fajalauza'">
+					<prompt>Se construyo durante el reinado de Yusuf primero</prompt>
+				<elseif cond="monumento == 'puerta monaita'"/>
+					<prompt>Se levanto en el siglo 11 coincidiendo con el traslado de la capital del emirato desde medina Elvira a medina Garnata</prompt>
+				<elseif cond="monumento == 'puerta de elvira'"/>
+					<prompt>Se construyo durante el siglo 11 por los sultanes ziries</prompt>
+				<elseif cond="monumento == 'iglesia del salvador'"/>
+					<prompt> Las obras del nuevo templo fueron trazadas por el arquitecto Juan de Maeda en el año 1565. La construcción concluyo en 1594 con la nave central</prompt>
+				<elseif cond="monumento == 'palacio de dar al-horra'"/>
+					<prompt>Se levanto en el siglo 13 sobre un palacio ziri anterior del siglo 11</prompt>
+				<elseif cond="monumento == 'el bañuelo'"/>
+					<prompt>Contiene un banio arabe, de epoca ziri, siglo XI.</prompt>
+				<elseif cond="monumento == 'san pedro y san pablo'"/>
+					<prompt>Trazado por el arquitecto Juan de Maeda, fue edificado en el siglo 15, entre los años 1559 y terminada en 1567</prompt>
+				<elseif cond="monumento == 'casa de porras'"/>
+					<prompt>Fue una de las primeras edificaciones realizadas tras la conquista cristiana de la ciudad de Granada en 1492</prompt>
+				<elseif cond="monumento == 'casa de castril'"/>
+					<prompt>En lo alto de la fachada está grabada la fecha de su construccion: 1539</prompt>
+				</if>
+		</filled>
+	</form>
+</vxml>

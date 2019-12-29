@@ -1,0 +1,5 @@
+#JSGF V1.0;
+
+grammar barrio;
+
+public <barrio> = Joaquina Eguaras | La Cruz | Pajaritos | Plaza de Toros | San Francisco Javier | San Ildefonso | Centro | Realejo | Angustias | Bobadilla | Cerrillo de Maracena | Bola de Oro | Camino de los Neveros | Carretera de la Sierra | Mirasierra | Cervantes | Lancha del Genil | Almanjayar | Campo Verde | Cartuja | Caseria de Montijo | Parque Nueva Granada | La Paz | Rey Badis | Camino de Ronda | Figares | Rosaleda | Zaidin;
