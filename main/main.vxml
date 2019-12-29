@@ -1,0 +1,35 @@
+<vxml version="2.1" xml:lang="es-ES">
+  <menu dtmf="true">
+    <prompt>
+      Hola! Soy Fraidey y estoy aqui para mejorar tu visita al Albaicin. Sobre
+      que querias preguntarme?
+      <enumerate>
+        Para <value expr="_prompt"/>, pulse <value expr="_dtmf"/>.
+      </enumerate>
+    </prompt>
+
+    <choice next="http://webhosting.voxeo.net/206414/www/NPI2019/sitiosAlbaicin/main.vxml">
+      Saber donde esta un sitio determinado
+    </choice>
+
+    <choice next="https://raw.githubusercontent.com/vrnk98/voz/master/prueba.vxml?token=AHW5NBTNQ7GWHNUOMDGBEGS6CHFJ2">
+      Saber donde comer
+    </choice>
+
+    <choice next="https://raw.githubusercontent.com/vrnk98/voz/master/tipoplato.vxml?token=AHW5NBVVNAHTA4EB3PA4SHS6B6TSM">
+      Saber como llegar al Albaicin
+    </choice>
+
+    <choice next="https://raw.githubusercontent.com/vrnk98/voz/master/tipocomida.vxml?token=AHW5NBUNFH3CWGNAU2TOYES6B6UXA">
+      Conocer fechas y epocas de los monumentos del Albaicin
+    </choice>
+
+    <choice next="https://raw.githubusercontent.com/vrnk98/voz/master/prueba2.vxml?token=AHW5NBR7EX4BHN65EBDFNBK6CHFKA">
+      Hacer preguntas sobre el Albaicin
+    </choice>
+
+    <choice next="http://webhosting.voxeo.net/206414/www/NPI2019/datosInteres/informacionInteres.vxml">
+      Conocer datos de interes
+    </choice>
+  </menu>
+</vxml>

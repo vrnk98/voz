@@ -1,0 +1,113 @@
+<vxml version="2.1" xml:lang="es-ES">
+	<link event="exit">
+		<grammar src="salir.jsgf"/>
+	</link>
+
+	<link event="help">
+		<grammar src="ayuda.jsgf"/>
+	</link>
+
+	<form id="sitios" scope="document">
+		<catch event="exit">
+			<reprompt/>
+			<goto nextitem="confirmar_salida"/>
+		</catch>
+
+		<catch event="help">
+			<prompt>
+				Diga el nombre del lugar o monumento que quiere vistar. Por ejemplo: Mirador de San Nicolas.
+			</prompt>
+
+			<clear namelist="help"/>
+		</catch>
+
+		<field name="sitioDestino">
+			<prompt timeout="20s"> Que lugar del Albaicin desea visitar? </prompt>
+			<grammar src="sitiosAlbaicin.jsgf"/>
+
+			<noinput>
+				Disculpe, pero no le escucho
+				<reprompt/>
+			</noinput>
+
+			<nomatch>
+				Disculpe, pero no conozco ese monumento o lugar
+				<reprompt/>
+			</nomatch>
+		</field>
+
+		<field name="confirmacion_destino" type="boolean">
+			<prompt>
+				Quieres visitar
+				<value expr="sitioDestino"/>
+				?
+			</prompt>
+
+			<filled>
+				<if cond="!confirmacion_destino">
+					<clear namelist="sitioDestino confirmacion_destino"/>
+				</if>
+			</filled>
+		</field>
+
+		<filled mode="all" namelist="sitioDestino confirmacion_destino">
+			<if cond="sitioDestino == 'plaza de san nicolas'">
+				<prompt>
+					Subiendo desde el mirador de san nicolas, la primera calle a la izquierda. Esta un poco escondida!
+				</prompt>
+
+			<elseif cond="(sitioDestino == 'mirador san nicolas' || sitioDestino == 'mirador de san nicolas')"/>
+				<prompt>
+					Lo mas directo es, desde el paseo de los tristes, subir la cuesta de Chapiz y meterse por la tercera calle a la izquierda. Hace falta caminar un poquito!
+				</prompt>
+
+			<elseif cond="sitioDestino == 'aljibe de san nicolas'"/>
+				<prompt> Justo encima del mirador de san nicolas! </prompt>
+
+			<elseif cond="sitioDestino == 'plaza larga'"/>
+				<prompt>
+					Estando en el mirador de san nicolas, subir por la calle del aljibe. Al encontrar unas escaleras y un arco, bajar por ellas. Acabara en la plaza larga.
+				</prompt>
+
+			<elseif cond="(sitioDestino == 'convento santa isabel' || sitioDestino == 'convento de santa isabel' || sitioDestino == 'convento santa isabel la real' || sitioDestino == 'convento de santa isabel la real')"/>
+				<prompt>
+					Baje dos calles desde el mirador de san nicolas y recorra el camino nuevo de san nicolas con la alhambra a su izquierda. Esta despues de la placeta cristo azucenas
+				</prompt>
+
+			<elseif cond="(sitioDestino == 'mirador lona' || sitioDestino == 'mirador de lona' || sitioDestino == 'mirador de la lona')"/>
+				<prompt>
+					Baje dos calles desde el mirador de san nicolas y recorra el camino nuevo de san nicolas con la alhambra a su izquierda. Esta al final de la calle, disfrute las vistas!
+				</prompt>
+
+			<elseif cond="(sitioDestino == 'monaita' || sitioDestino == 'puerta monaita')"/>
+				<prompt>
+					Baje dos calles desde el mirador de san nicolas y recorra el camino nuevo de san nicolas con la alhambra a su izquierda. Cuando llegue al final de la calle, suba el carril de la lona. La encontrara a la derecha.
+				</prompt>
+
+			<elseif cond="(sitioDestino == 'pesas' || sitioDestino == 'arco pesas' || sitioDestino == 'puerta pesas' || sitioDestino == 'arco de pesas' || sitioDestino == 'puerta de pesas' || sitioDestino == 'arco de las pesas' || sitioDestino == 'arco de las pesas')"/>
+				<prompt>
+					Estando en el mirador de san nicolas, subir por la calle del aljibe. Al encontrar unas escaleras y un arco. Ahi lo tiene!
+				</prompt>
+			</if>
+
+			<prompt> Espero haber sido de ayuda, hasta otra! </prompt>
+			<exit/>
+		</filled>
+
+		<field name="confirmar_salida" type="boolean">
+			<prompt>
+				Desea visitar algun lugar o monumento del albaicin?
+			</prompt>
+
+			<filled>
+				<if cond="confirmar_salida">
+					Perdone, debi entenderle mal.
+					<clear namelist="confirmar_salida exit"/>
+				<else/>
+					De acuerdo, hasta otra!
+					<exit/>
+				</if>
+			</filled>
+		</field>
+	</form>
+</vxml>

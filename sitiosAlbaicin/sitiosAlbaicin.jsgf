@@ -1,0 +1,5 @@
+#JSGF V1.0;
+grammar visitar_monumento;
+public <visitar_monumento> = (plaza de | mirador [de] | aljibe de) san nicolas | plaza larga |
+                             convento [de] santa isabel [la real] | mirador [de [la]] lona |
+                             [puerta] monaita | [arco | puerta] [de [las]] pesas;

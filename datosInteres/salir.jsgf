@@ -1,0 +1,3 @@
+#JSGF V1.0;
+grammar salir;
+public <salir> = cancelar | adios | terminar | acabar | finalizar | ninguno;

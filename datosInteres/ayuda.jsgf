@@ -1,0 +1,3 @@
+#JSGF V1.0;
+grammar ayuda;
+public <ayuda> = ayuda | help | que tengo que decir | socorro;

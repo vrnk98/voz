@@ -1,0 +1,144 @@
+<vxml version="2.1" xml:lang="es-ES">
+
+	<link event="exit">
+ 		<grammar src="salir.jsgf"/>
+	</link>
+
+  <link event="help">
+ 		<grammar src="ayuda.jsgf"/>
+	</link>
+
+	<form id="sitios" scope="document">
+
+		<catch event="exit">
+	    <reprompt/>
+	    <goto nextitem="confirmar_salida"/>
+  	</catch>
+
+		<catch event="help">
+      <prompt>
+        Diga el nombre del lugar o monumento del que quiere conoces algun dato
+				interesante. Por ejemplo: Mirador de San Nicolas
+      </prompt>
+      <clear namelist="help"/>
+  	</catch>
+
+		<field name="sitio">
+			<prompt timeout="20s">
+				De que lugar o monumento quiere que le cuente un dato de interes?
+      </prompt>
+			<grammar src="sitiosAlbaicin.jsgf"/>
+
+			<noinput>
+				Disculpe, pero no le escucho
+				<reprompt/>
+			</noinput>
+
+			<nomatch>
+				Disculpe, pero no conozco ese monumento o lugar
+				<reprompt/>
+			</nomatch>
+		</field>
+
+		<field name="confirmacion_lugar" type="boolean">
+			<prompt>
+				Quieres saber algo sobre <value expr="sitio"/> ?
+			</prompt>
+
+			<filled>
+				<if cond="!confirmacion_lugar">
+					<clear namelist="sitio confirmacion_lugar"/>
+				</if>
+			</filled>
+		</field>
+
+	  <filled mode="all" namelist="sitio confirmacion_lugar">
+      <if cond="(sitio == 'mirador san nicolas' || sitio == 'mirador de san nicolas')">
+        <prompt>
+          En la epoca Ziri, su funcion principal era de lugar de reunion y plaza
+					de armas. Se dice que aqui tuvieron lugar negociaciones secretas que
+					terminaron con la rendicion de Boabdil y la toma de Granada por los
+					Reyes Catolicos.
+
+        	Ademas, Bill Clinton, expresidente de Estados Unidos, lo visito en 1997 y dijo
+					que desde alli se veia la puesta de sol mas bonita del mundo.
+        </prompt>
+      <elseif cond="sitio == 'aljibe de san nicolas'"/>
+        <prompt>
+          Los aljibes del Albaici eran abastecidos en su gran mayoria por las aguas
+					provenientes de la acequia de Aynadamar. Los aljibes publicos era el sistema
+					de abastecimiento de agua para consumo humano de la Granada islamica.
+
+					El aljibe de San Nicolas es de la epoca cristiana y es uno de los aljibes
+					de mayor capacidad de Granada.
+        </prompt>
+      <elseif cond="sitio == 'plaza larga'"/>
+        <prompt>
+          Servia para conectar el Rabat Albaicin con la Alcazaba Qadime a traves
+					del Arco de las Pesas o Puerta Nueva. Cuando se expulso a los moriscos
+					fue ampliada hasta su aspecto actual.
+
+					En ella se construyo un matadero, se intalo unas carnicerias y un lavadero
+					publico. Es uno de los centros mas bulliciosos de Albaicin y donde se
+					celebran mercadillos al aire libre.
+        </prompt>
+      <elseif cond="(sitio == 'convento santa isabel' || sitio == 'convento de santa isabel'
+                  || sitio == 'convento santa isabel la real' || sitio == 'convento de santa isabel la real')"/>
+        <prompt>
+          Es un monasterio de monjas franciscanas clarisas, fundado por deseo
+					expreso de la Reina Isabel de Castilla. En principio, se penso en intalar
+					el convento en la Alhambra, pero se construyo sobre parte de los terrens
+					del palacio deDar al-Horra.
+        </prompt>
+      <elseif cond="(sitio == 'mirador lona' || sitio == 'mirador de lona' ||
+                  sitio == 'mirador de la lona')"/>
+        <prompt>
+          El nombre de la "Lona" se debe a la Casa de La Lona, un inmueble del que
+					se cuentan muchas y diversas leyendas alimentads por los escritos de Afan
+					de Ribera y de Washington Irving, que han ido variando a lo largo de los
+					anios.
+        </prompt>
+      <elseif cond="(sitio == 'monaita' || sitio == 'puerta monaita')"/>
+        <prompt>
+          Forma parte de la muralla que rodeaba la primitiva Alcazaba Qadima y
+					constituyo uno de los accesos principales a la ciudad medieval islamica.
+					Es una de las siete puertas que tenia la Alcazaba Qadima del Albayzin.
+					Fue una de los accesos más importantes de la ciudad en el periodo islamico.
+        </prompt>
+      <elseif cond="(sitio == 'pesas' || sitio == 'arco pesas' ||
+                   sitio == 'puerta pesas' || sitio == 'arco de pesas' ||
+                   sitio == 'puerta de pesas' || sitio == 'arco de las pesas' ||
+                   sitio == 'arco de las pesas')"/>
+        <prompt>
+          Es una de las primeras puertas en recodo de la arquitectura hispanomusulmana
+					y fue uno de los puntos de acceso de la muralla ziri, que separaba el
+					Albaicin del barrio de la Alcazaba Qadima.
+
+					Su nombre se debe a que en ella, desde finales del sigo dieciseis, se
+					depositaban las pesas trucadas que se consfiscaban a los comerciantes
+					de los establecimientos situados en las proximidades de la Plaza Larga.
+        </prompt>
+      </if>
+      <prompt>
+        Espero haber sido de ayuda, hasta otra!
+      </prompt>
+      <exit/>
+		</filled>
+
+    <field name="confirmar_salida" type="boolean">
+      <prompt>
+        Desea saber algo sobre algun monumento o lugar del Albaicin?
+      </prompt>
+
+			<filled>
+				<if cond="confirmar_salida">
+          Perdone, debi entenderle mal.
+          <clear namelist="confirmar_salida exit"/>
+				<else/>
+          De acuerdo, hasta otra!
+          <exit/>
+				</if>
+			</filled>
+		</field>
+	</form>
+</vxml>
