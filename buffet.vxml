@@ -6,9 +6,9 @@
 	</form>
 	<menu>
 			<prompt>Puede ir a  <enumerate/></prompt>
-			<choice next=""https://github.com/vrnk98/voz/blob/master/main/main.vxml"/>"> menu principal
+			<choice next=""https://github.com/vrnk98/voz/blob/master/main/main.vxml"/> menu principal
 			</choice>
-			<choice next="https://raw.githubusercontent.com/vrnk98/voz/master/mediterranea.vxml"> salir
+			<choice next="https://raw.githubusercontent.com/vrnk98/voz/master/mediterranea.vxml"/> salir
 			</choice>
 	</menu>
 </vxml>
