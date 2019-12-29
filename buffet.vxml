@@ -2,7 +2,7 @@
 	<form id="buffet">
 		<block>
 			<prompt>Para comer de buffet puedes ir al barrio de San Ildefonso </prompt>
-			<goto next="https://github.com/vrnk98/voz/blob/master/main/main.vxml"/>
 		</block>
+		<goto next="https://github.com/vrnk98/voz/blob/master/main/main.vxml"/>
 	</form>
 </vxml>
