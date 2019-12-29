@@ -1,7 +1,10 @@
 <vxml version="2.1" xml:lang="es-ES">
 	<form id="vive_albaicin">
 		<block>		
-			<prompt>En el Albaicin vivian los nazaries</prompt>
+			<prompt>En el Albaicin, que para los árabes tenía como significado,
+					arrabal de los halconeros, vivían un conjunto de personas,
+					dedicadas a un mismo gremio
+			</prompt>
 		</block>
 	</form>
 </vxml>

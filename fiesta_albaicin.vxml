@@ -1,7 +1,9 @@
 <vxml version="2.1" xml:lang="es-ES">
 	<form id="fiesta_albaicin">
 		<block>		
-			<prompt>La famosa fiesta del albaicin es la fiesta de San Miguel Albaicin, en la cual el ultimo dia se celebra la romeria
+			<prompt>La famosa fiesta del albaicin,
+					es la fiesta de San Miguel Albaicin,
+					en la cual, el ultimo dia, se celebra la romeria
 			</prompt>
 		</block>
 	</form>

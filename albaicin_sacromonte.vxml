@@ -1,7 +1,10 @@
 <vxml version="2.1" xml:lang="es-ES">
 	<form id="albaicin_sacromonte">
 		<block>		
-			<prompt>Albaicin y sacromonte son dos barrios distintos. El Sacromonte destaca por sus cuevas y el Albaicin por sus casitas blancas</prompt>
+			<prompt>Albaicin y sacromonte son dos barrios distintos. 
+					El Sacromonte destaca por sus cuevas,
+					y el Albaicin por sus casitas blancas.
+			</prompt>
 		</block>
 	</form>
 </vxml>
